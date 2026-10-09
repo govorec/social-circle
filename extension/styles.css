@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.popup-shell {
+  width: 320px;
+  padding: 18px 16px 14px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+p {
+  margin: 0 0 16px;
+  line-height: 1.45;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.primary-button {
+  background: #111827;
+  color: white;
+}
+
+.secondary-button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.status {
+  margin-top: 10px;
+  min-height: 20px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.status.error {
+  color: #b91c1c;
+}

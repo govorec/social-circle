@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Social Circle Collector",
+  "version": "0.1.0",
+  "description": "Collect an Instagram social graph and export it in the format expected by the social-circle visualizer.",
+  "permissions": ["storage", "downloads", "tabs"],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "action": {
+    "default_title": "Social Circle Collector",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["interceptor.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

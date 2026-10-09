@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Circle Collector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <h1>Social Circle</h1>
+      <p>Collect the current Instagram followers graph and export it as a JSON file.</p>
+
+      <button id="collect" class="primary-button">Collect graph</button>
+      <button id="open-instagram" class="secondary-button">Open Instagram</button>
+
+      <hr />
+      <h2>Engagement</h2>
+      <p>
+        Passive mode is always on and carries zero extra risk: it only records
+        what Instagram already sends while you browse. Assisted mode crawls
+        slowly with strict budgets and stops immediately (24h cooldown) at any
+        rate-limit signal.
+      </p>
+      <p id="engagement-stats" class="status">No engagement data yet.</p>
+      <button id="collect-engagement" class="primary-button">Collect engagement (assisted)</button>
+      <button id="export-engagement" class="secondary-button">Export engagement + ranking</button>
+      <button id="import-data" class="secondary-button">Import previous export (merge)</button>
+      <input id="import-file" type="file" accept=".json" hidden />
+      <button id="clear-engagement" class="secondary-button">Clear engagement data</button>
+
+      <hr />
+      <h2>Debug</h2>
+      <label class="debug-toggle">
+        <input type="checkbox" id="debug-toggle" /> Debug mode (log all captures)
+      </label>
+      <p id="debug-stats" class="status"></p>
+      <button id="export-debug" class="secondary-button">Export debug log</button>
+      <button id="clear-debug" class="secondary-button">Clear debug log</button>
+
+      <p id="status" class="status" aria-live="polite">Ready</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

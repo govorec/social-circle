@@ -1,0 +1,7 @@
+# user data exports
+/out/
+
+# misc
+.DS_Store
+TODO.md
+
